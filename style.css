@@ -111,6 +111,31 @@ body {
 	animation: flyUp 1s forwards;
 }
 
+.click-message {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 24px;
+	color: red;
+	font-family: 'Azeret Mono', monospace;
+	opacity: 0;
+	animation: fadeInOut 3s forwards;
+	z-index: 12;
+}
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 @keyframes fall {
 	0% {
 		transform: translateY(-100px);
@@ -253,6 +278,30 @@ body {
 		transform: translate(-50%, -50%);
 		white-space: nowrap;
 		animation: flyUp 1s forwards;
+	}
+
+	.click-message {
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 24px;
+		color: red;
+		font-family: 'Azeret Mono', monospace;
+		opacity: 0;
+		animation: fadeInOut 3s forwards;
+	}
+
+	@keyframes fadeInOut {
+		0% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
 	}
 
 	@keyframes fall {
