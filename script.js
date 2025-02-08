@@ -30,7 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		gif.style.animationPlayState = 'running'
 	}
 
+	let heartClicked = 0
+
 	function showLoveMessage(left, top) {
+		heartClicked++
 		const message = document.createElement('div')
 		message.classList.add('love-message')
 		message.style.left = `${left}px`
@@ -38,6 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		message.textContent = 'I love you!'
 		container.appendChild(message)
 	}
+
+	setTimeout(() => {
+		if (heartClicked === 0) {
+			const clickMessage = document.createElement('div')
+			clickMessage.classList.add('click-message')
+			clickMessage.textContent = 'Click on heart'
+			document.body.appendChild(clickMessage)
+		}
+	}, 5000)
 
 	for (let i = 0; i < numberOfGifs; i++) {
 		createGif()
