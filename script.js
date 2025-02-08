@@ -42,14 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
 		container.appendChild(message)
 	}
 
-	setTimeout(() => {
+	function showClickMessage() {
 		if (heartClicked === 0) {
 			const clickMessage = document.createElement('div')
 			clickMessage.classList.add('click-message')
 			clickMessage.textContent = 'Click on heart'
 			document.body.appendChild(clickMessage)
+			setTimeout(() => {
+				clickMessage.remove()
+			}, 3000)
 		}
-	}, 5000)
+	}
+
+	setInterval(showClickMessage, 5000)
 
 	for (let i = 0; i < numberOfGifs; i++) {
 		createGif()
