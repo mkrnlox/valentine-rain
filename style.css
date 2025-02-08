@@ -13,6 +13,7 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	touch-action: none;
 }
 
 .gif-container {
@@ -139,7 +140,7 @@ body {
 	}
 }
 
-@media (max-width: 300px) {
+@media (max-width: 768px) {
 	body {
 		margin: 0;
 		overflow: hidden;
@@ -153,6 +154,7 @@ body {
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+		touch-action: none;
 	}
 
 	.gif-container {
