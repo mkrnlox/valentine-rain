@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const container = document.querySelector('.gif-container')
-	const numberOfGifs = 100 // Adjust the number of GIFs as needed
+	let numberOfGifs = 100 // Adjust the number of GIFs as needed
 	const segments = 10 // Number of segments to divide the width into
+
+	if (/Mobi|Android|IOS/i.test(navigator.userAgent)) {
+		numberOfGifs = numberOfGifs / 2
+	}
 
 	function createGif() {
 		const gif = document.createElement('div')
