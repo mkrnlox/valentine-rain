@@ -139,7 +139,7 @@ body {
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 300px) {
 	body {
 		margin: 0;
 		overflow: hidden;
